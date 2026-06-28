@@ -183,6 +183,10 @@
     .callout, .diagram { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     a[data-go] { color:inherit; text-decoration:none; }
   }
+  .videowrap { position:relative; width:100%; padding-top:56.25%; border-radius:14px;
+    overflow:hidden; border:1px solid var(--line); box-shadow:0 10px 26px rgba(0,0,0,.07);
+    background:#0b0b0b; margin:8px 0; }
+  .videowrap iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
 </style>
 </head>
 <body>
@@ -196,6 +200,9 @@
       <a data-go="task9">Task 9</a>
       <a data-go="task10">Task 10</a>
       <a data-go="databox">DataBox</a>
+      <a data-go="competencies">Competencies</a>
+      <a data-go="curation">Curation</a>
+      <a data-go="extras">Course Reflection</a>
     </nav>
   </div>
 </header>
@@ -255,6 +262,18 @@
         <div class="k">DataBox</div><div class="t">Reviewing a VR Data-Literacy Game</div>
         <div class="d">Evaluating an immersive VR game that teaches data as the "currency of everything."</div>
       </a>
+      <a class="tcard" data-go="competencies">
+        <div class="k">Competencies</div><div class="t">Competencies Map</div>
+        <div class="d">How the five activities build the course&rsquo;s competencies.</div>
+      </a>
+      <a class="tcard" data-go="curation">
+        <div class="k">Curation</div><div class="t">The Course Map</div>
+        <div class="d">The big ideas of the subject, organised into five strands.</div>
+      </a>
+      <a class="tcard" data-go="extras">
+        <div class="k">Reflection</div><div class="t">Course Reflection</div>
+        <div class="d">A critical look back at the whole learning process.</div>
+      </a>
     </div>
   </section>
 
@@ -293,6 +312,17 @@
       assessed explicitly against PIC-RAT — aiming to move families from Passive consumption
       toward Interactive, Creative, Transformative use.</p>
     </details>
+    <h2 class="section">Roles in the Preparation</h2>
+    <p class="body serif">This is an individual portfolio, so I took on every role myself. Here is how each one shaped this task:</p>
+    <table class="cmp">
+      <thead><tr><th>Role</th><th>What it involved for this task</th></tr></thead>
+      <tbody>
+        <tr><td><b>Facilitator</b></td><td>Set the scope — a single map connecting both frameworks — and kept the work to that one goal.</td></tr>
+        <tr><td><b>Analyst</b></td><td>Ran the ChatGPT self-reflection and wrote the critical report on what the map did and did not show.</td></tr>
+        <tr><td><b>Translator</b></td><td>Put the framework vocabulary (TPACK, PIC-RAT, the RAT levels) into plain language.</td></tr>
+        <tr><td><b>Curator</b></td><td>Gathered the source definitions (Mishra &amp; Koehler; Kimmons) and built the diagram.</td></tr>
+      </tbody>
+    </table>
     <h2 class="section">AI Self-Reflection</h2>
     <p class="body serif">For Task 1 I used <b>ChatGPT</b> as a reflection facilitator — not to build the map, but to pressure-test how I connected the two frameworks. I pasted the facilitator prompt from the brief, described the task, and worked through the questions it generated.</p>
     <div class="reqs">
@@ -304,6 +334,8 @@
         <span>Questions 2, 3 and 5 are unpacked through their sub-questions; 1 and 4 are answered along the way.</span></div></div>
       <div class="req"><span class="chk">✓</span><div><b>Wrote the team self-reflection</b>
         <span>A structured reflection drawn from the conversation closes this block.</span></div></div>
+      <div class="req"><span class="chk">✓</span><div><b>Answered the analyst&rsquo;s four questions on the AI Self-Helper</b>
+        <span>Collected in a highlighted note at the end of this reflection.</span></div></div>
     </div>
     <details>
       <summary>Open the full reflection — ChatGPT transcript + team self-reflection</summary>
@@ -413,7 +445,36 @@
     <p class="body serif"><b>3. How this connects to TPACK and PIC-RAT.</b> We now read TPACK as the planning lens and PIC-RAT as the evaluation lens. Strong TPACK doesn't guarantee a good PIC-RAT outcome — a tablet textbook can still be Passive/Replacement — it only makes a better one possible.</p>
     <p class="body serif"><b>4. Evidence the work is authentically ours.</b> The redraw history (two clouds becoming one pipeline) and our own working definition of "amplification" — the fuzzy middle we had to define in order to place it — are traces of thinking no template would produce.</p>
     <p class="body serif"><b>5. Key takeaway.</b> These frameworks describe a process, not a checklist. That reframing is what we carried into every later task, especially using PIC-RAT to judge finished work.</p>
+          <div class="callout" style="margin-top:22px;">
+        <div class="k">On using the AI Self-Helper &mdash; the analyst&rsquo;s four questions</div>
+        <ul>
+        <li><b>How did you use the AI Self-Helper in your reflection process for this task?</b><br>I pasted the facilitator prompt into ChatGPT, gave it the Task&nbsp;1 brief, and worked through the five questions it generated — choosing 2, 3 and 5 to unpack with its sub-questions, rather than asking it to explain the frameworks for me.</li>
+        <li><b>What impact do you think it had on the depth or quality of your reflection?</b><br>It pushed me past &ldquo;I drew the two frameworks&rdquo; to admitting my first draft was two clouds joined by a line. The follow-ups made me articulate the TPACK&nbsp;&rarr;&nbsp;PIC-RAT pipeline I had drawn without fully understanding it.</li>
+        <li><b>Has your way of understanding what reflection means changed after using this tool? If so, how?</b><br>Yes. I used to treat reflection as summarising what I did; the tool reframed it as interrogating what I had taken for granted — like assuming a concept map &ldquo;shows a relationship&rdquo; when mine did not yet.</li>
+        <li><b>Do you think you would use a similar tool in other tasks or subjects? Why or why not?</b><br>Yes, especially for visual or conceptual work, because it is good at asking &ldquo;what does this actually connect to?&rdquo; My one caution is to keep supplying my own answers and not let it think for me.</li>
+        </ul>
+      </div>
     </details>
+    <h2 class="section">Key Terms (Translator&rsquo;s Glossary)</h2>
+    <table class="cmp">
+      <thead><tr><th>Term</th><th>Meaning in this task</th></tr></thead>
+      <tbody>
+        <tr><td><b>TPACK</b></td><td>The knowledge teachers need at the overlap of Technological, Pedagogical and Content knowledge.</td></tr>
+        <tr><td><b>PIC-RAT</b></td><td>A model pairing the learner&rsquo;s relationship to technology (Passive / Interactive / Creative) with its effect on practice (Replacement / Amplification / Transformation).</td></tr>
+        <tr><td><b>Replacement / Amplification / Transformation</b></td><td>Whether a tool digitises an old task, makes it more efficient, or enables something previously impossible.</td></tr>
+        <tr><td><b>Pedagogical Content Knowledge</b></td><td>Knowing how to teach specific content — the heart of TPACK before technology is added.</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">Definitions informed by: Mishra &amp; Koehler (2006); Kimmons, Graham &amp; West (2020).</p>
+    <h2 class="section">Self-Evaluation</h2>
+    <table class="cmp">
+      <thead><tr><th>Assessment</th><th>Score</th><th>Justification</th></tr></thead>
+      <tbody>
+        <tr><td><b>My individual work</b></td><td><b>8/10</b></td><td>Strong final map and a clear write-up, but I only understood the TPACK&rarr;PIC-RAT pipeline through the reflection, not while drawing it.</td></tr>
+        <tr><td><b>The task overall</b></td><td><b>8/10</b></td><td>A focused, well-scoped task delivered on its single goal.</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">Scale: 1 = minimum, 10 = maximum; 5 means everything was done well.</p>
     <div class="btnrow"><a class="btn ghost" data-go="home">← Back to Home</a></div>
   </section>
 
@@ -516,6 +577,17 @@
       terms, comparing AIs and authoring guidelines is a <b>Creative</b>, higher-order use — the
       opposite of passively trusting a single chatbot.</p>
     </details>
+    <h2 class="section">Roles in the Preparation</h2>
+    <p class="body serif">This is an individual portfolio, so I took on every role myself. Here is how each one shaped this task:</p>
+    <table class="cmp">
+      <thead><tr><th>Role</th><th>What it involved for this task</th></tr></thead>
+      <tbody>
+        <tr><td><b>Facilitator</b></td><td>Planned the three-AI comparison and the synthesis into a single final list.</td></tr>
+        <tr><td><b>Analyst</b></td><td>Ran the Copilot self-reflection and separated genuine ethics from school-policy compliance.</td></tr>
+        <tr><td><b>Translator</b></td><td>Defined the working terms — generative AI, bias, deepfake, academic integrity.</td></tr>
+        <tr><td><b>Curator</b></td><td>Collected the three AI outputs and the speculative-fiction sources (Payne, 2019).</td></tr>
+      </tbody>
+    </table>
     <h2 class="section">AI Self-Reflection</h2>
     <p class="body serif">For Task 7 I used <b>Copilot</b> as a reflection facilitator to interrogate how I compared three AI models and built my own ethics list. I pasted the facilitator prompt from the brief, described the task, and explored the questions it raised.</p>
     <div class="reqs">
@@ -527,6 +599,8 @@
         <span>Questions 4, 3 and 5 are unpacked through their sub-questions; 1 and 2 are answered along the way.</span></div></div>
       <div class="req"><span class="chk">✓</span><div><b>Wrote the team self-reflection</b>
         <span>A structured reflection drawn from the conversation closes this block.</span></div></div>
+      <div class="req"><span class="chk">✓</span><div><b>Answered the analyst&rsquo;s four questions on the AI Self-Helper</b>
+        <span>Collected in a highlighted note at the end of this reflection.</span></div></div>
     </div>
     <details>
       <summary>Open the full reflection — Copilot transcript + team self-reflection</summary>
@@ -625,7 +699,37 @@
     <p class="body serif"><b>3. How this connects to TPACK and PIC-RAT.</b> Evaluating AI tools is Technological Knowledge in action, and judging tone versus accuracy is the critical-use disposition PIC-RAT pushes toward — moving from passive acceptance of AI output to active, creative scrutiny of it.</p>
     <p class="body serif"><b>4. Evidence the work is authentically ours.</b> Our strongest proof is an omission: we deliberately cut the AIs' school-policy items and can explain why. The self-referential guideline ("use the same prompt on multiple AIs") and catching ourselves trusting a confident tone are also traces of genuine reasoning.</p>
     <p class="body serif"><b>5. Key takeaway.</b> Tone is persuasion, not accuracy. We wrote a rule warning that AI can sound confident while being wrong, then nearly fell for it ourselves — proof the rule was worth writing.</p>
+          <div class="callout" style="margin-top:22px;">
+        <div class="k">On using the AI Self-Helper &mdash; the analyst&rsquo;s four questions</div>
+        <ul>
+        <li><b>How did you use the AI Self-Helper in your reflection process for this task?</b><br>I pasted the prompt into Copilot, described the three-AI comparison and my final list, and explored questions 4, 3 and 5 in depth through its sub-questions.</li>
+        <li><b>What impact do you think it had on the depth or quality of your reflection?</b><br>It made me separate ethics from compliance and admit I had nearly trusted DeepSeek&rsquo;s confident tone — a sharper and more honest reflection than I would have written alone.</li>
+        <li><b>Has your way of understanding what reflection means changed after using this tool? If so, how?</b><br>Yes. Reflection became about catching my own contradictions (I broke my own &ldquo;confident&nbsp;&ne;&nbsp;correct&rdquo; rule) rather than just listing what I had learned.</li>
+        <li><b>Do you think you would use a similar tool in other tasks or subjects? Why or why not?</b><br>Yes — it suits any task where I compare sources, since it keeps asking why I trusted one over another. Using AI to reflect on AI ethics is a little ironic, so, applying my own transparency rule, I am declaring it openly.</li>
+        </ul>
+      </div>
     </details>
+    <h2 class="section">Key Terms (Translator&rsquo;s Glossary)</h2>
+    <table class="cmp">
+      <thead><tr><th>Term</th><th>Meaning in this task</th></tr></thead>
+      <tbody>
+        <tr><td><b>Generative AI</b></td><td>Systems that produce new text, images or audio from patterns in their training data.</td></tr>
+        <tr><td><b>Hallucination</b></td><td>Confident AI output that is factually wrong.</td></tr>
+        <tr><td><b>Algorithmic bias</b></td><td>Systematic skew in outputs that reflects biased training data.</td></tr>
+        <tr><td><b>Deepfake</b></td><td>Synthetic media that convincingly fakes a real person.</td></tr>
+        <tr><td><b>Academic integrity</b></td><td>Honest authorship, including disclosing how AI was used.</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">Definitions informed by: UNESCO (2023), <i>Guidance for generative AI in education and research</i>.</p>
+    <h2 class="section">Self-Evaluation</h2>
+    <table class="cmp">
+      <thead><tr><th>Assessment</th><th>Score</th><th>Justification</th></tr></thead>
+      <tbody>
+        <tr><td><b>My individual work</b></td><td><b>8/10</b></td><td>A genuine synthesis with my own additions, though I leaned on AI-generated lists and could have cited more external ethics sources.</td></tr>
+        <tr><td><b>The task overall</b></td><td><b>8/10</b></td><td>Thorough comparison and a defensible final list; light on outside references.</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">Scale: 1 = minimum, 10 = maximum; 5 means everything was done well.</p>
     <div class="btnrow"><a class="btn ghost" data-go="home">← Back to Home</a></div>
   </section>
 
@@ -696,6 +800,17 @@
       TPACK terms it's the <b>content knowledge</b> behind the campaign; in PIC-RAT terms it sets
       up the move from passive worry toward informed, active use.</p>
     </details>
+    <h2 class="section">Roles in the Preparation</h2>
+    <p class="body serif">This is an individual portfolio, so I took on every role myself. Here is how each one shaped this task:</p>
+    <table class="cmp">
+      <thead><tr><th>Role</th><th>What it involved for this task</th></tr></thead>
+      <tbody>
+        <tr><td><b>Facilitator</b></td><td>Split the task into persona then evidence, and kept both honest.</td></tr>
+        <tr><td><b>Analyst</b></td><td>Ran the DeepSeek self-reflection and flagged the &ldquo;consensus is not truth&rdquo; problem.</td></tr>
+        <tr><td><b>Translator</b></td><td>Defined persona, meta-analysis, and screen time versus screen use.</td></tr>
+        <tr><td><b>Curator</b></td><td>Organised the three AI responses and compared their source bases.</td></tr>
+      </tbody>
+    </table>
     <h2 class="section">AI Self-Reflection</h2>
     <p class="body serif">For Task 9 I used <b>DeepSeek</b> as a reflection facilitator to examine how I built the persona and read the AI evidence. I pasted the facilitator prompt from the brief, described both steps of the task, and explored the questions it raised.</p>
     <div class="reqs">
@@ -707,6 +822,8 @@
         <span>Questions 2, 1 and 5 are unpacked through their sub-questions; 3 and 4 are answered along the way.</span></div></div>
       <div class="req"><span class="chk">✓</span><div><b>Wrote the team self-reflection</b>
         <span>A structured reflection drawn from the conversation closes this block.</span></div></div>
+      <div class="req"><span class="chk">✓</span><div><b>Answered the analyst&rsquo;s four questions on the AI Self-Helper</b>
+        <span>Collected in a highlighted note at the end of this reflection.</span></div></div>
     </div>
     <details>
       <summary>Open the full reflection — DeepSeek transcript + team self-reflection</summary>
@@ -814,7 +931,36 @@
     <p class="body serif"><b>3. How this connects to TPACK and PIC-RAT.</b> This step is the content knowledge (the C in TPACK) behind the later campaign. Interrogating where that content came from is the critical, active stance PIC-RAT values over passive acceptance.</p>
     <p class="body serif"><b>4. Evidence the work is authentically ours.</b> Amber's scepticism was drawn from real tech-wary people we know, and we can name exactly where we smoothed over inconvenient evidence and why — an honesty no generated persona would volunteer.</p>
     <p class="body serif"><b>5. Key takeaway.</b> We let the downstream task shape the persona: knowing a campaign was coming, we wrote someone convenient to persuade. Naming that bias is more valuable than hiding it.</p>
+          <div class="callout" style="margin-top:22px;">
+        <div class="k">On using the AI Self-Helper &mdash; the analyst&rsquo;s four questions</div>
+        <ul>
+        <li><b>How did you use the AI Self-Helper in your reflection process for this task?</b><br>I pasted the prompt into DeepSeek, described both steps (building the persona and gathering the AI evidence), and explored questions 2, 1 and 5.</li>
+        <li><b>What impact do you think it had on the depth or quality of your reflection?</b><br>Its sub-questions led me to realise that &ldquo;three AIs agreeing&rdquo; is not three independent witnesses — the single most valuable insight of the task, which I would not have reached unprompted.</li>
+        <li><b>Has your way of understanding what reflection means changed after using this tool? If so, how?</b><br>Yes. Reflection stopped being self-congratulation and became stress-testing my own conclusions — and admitting I had built a persona that was convenient to persuade.</li>
+        <li><b>Do you think you would use a similar tool in other tasks or subjects? Why or why not?</b><br>Yes, particularly for research tasks, to check whether I have mistaken consensus for truth before I build anything on top of it.</li>
+        </ul>
+      </div>
     </details>
+    <h2 class="section">Key Terms (Translator&rsquo;s Glossary)</h2>
+    <table class="cmp">
+      <thead><tr><th>Term</th><th>Meaning in this task</th></tr></thead>
+      <tbody>
+        <tr><td><b>Persona</b></td><td>A fictional but evidence-informed profile that represents a target audience.</td></tr>
+        <tr><td><b>Meta-analysis</b></td><td>A study that statistically combines the results of many earlier studies.</td></tr>
+        <tr><td><b>Screen time vs screen use</b></td><td>Total hours on a device versus what is actually done on it.</td></tr>
+        <tr><td><b>Confirmation bias</b></td><td>Favouring evidence that fits what we already believe.</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">Definitions informed by: Livingstone &amp; Blum-Ross (2020), <i>Parenting for a Digital Future</i>.</p>
+    <h2 class="section">Self-Evaluation</h2>
+    <table class="cmp">
+      <thead><tr><th>Assessment</th><th>Score</th><th>Justification</th></tr></thead>
+      <tbody>
+        <tr><td><b>My individual work</b></td><td><b>7/10</b></td><td>Good persona and comparison, but I treated chatbot consensus as evidence and did not check a primary source.</td></tr>
+        <tr><td><b>The task overall</b></td><td><b>7/10</b></td><td>Solid foundation for Task 10, weakened by relying on AI agreement as proof.</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">Scale: 1 = minimum, 10 = maximum; 5 means everything was done well.</p>
     <div class="btnrow"><a class="btn ghost" data-go="home">← Back to Home</a> <a class="btn" data-go="task10">See the campaign (Task 10) →</a></div>
   </section>
 
@@ -933,6 +1079,17 @@
       Transformation</b> of how families use screens, not mere Replacement of one warning with
       another.</p>
     </details>
+    <h2 class="section">Roles in the Preparation</h2>
+    <p class="body serif">This is an individual portfolio, so I took on every role myself. Here is how each one shaped this task:</p>
+    <table class="cmp">
+      <thead><tr><th>Role</th><th>What it involved for this task</th></tr></thead>
+      <tbody>
+        <tr><td><b>Facilitator</b></td><td>Held the hook&nbsp;&rarr;&nbsp;evidence&nbsp;&rarr;&nbsp;nuance&nbsp;&rarr;&nbsp;action arc together.</td></tr>
+        <tr><td><b>Analyst</b></td><td>Ran the DeepSeek self-reflection and wrote the &ldquo;Me&rdquo; row exposing shared bias.</td></tr>
+        <tr><td><b>Translator</b></td><td>Defined evidence-led campaign, call to action, and audience persona.</td></tr>
+        <tr><td><b>Curator</b></td><td>Sourced the evidence and the recommended readings (Watters; Livingstone &amp; Blum-Ross).</td></tr>
+      </tbody>
+    </table>
     <h2 class="section">AI Self-Reflection</h2>
     <p class="body serif">For this task I used <b>DeepSeek</b> as a reflection facilitator — not to do any
     work, but to ask better questions about the <b>“Screens with Sense”</b> campaign. I pasted the exact
@@ -947,6 +1104,8 @@
         <span>Questions 3, 2 and 5 are each unpacked through their sub-questions; questions 1 and 4 are woven in along the way.</span></div></div>
       <div class="req"><span class="chk">✓</span><div><b>Wrote the team self-reflection</b>
         <span>A structured reflection drawn from the conversation closes this block.</span></div></div>
+      <div class="req"><span class="chk">✓</span><div><b>Answered the analyst&rsquo;s four questions on the AI Self-Helper</b>
+        <span>Collected in a highlighted note at the end of this reflection.</span></div></div>
     </div>
     <details>
       <summary>Open the full reflection — DeepSeek transcript + team self-reflection</summary>
@@ -1202,7 +1361,36 @@
     audience can easily become suppressing evidence for comfort. The line between "making it
     accessible" and "making it palatable" is thinner than we thought. Naming that tension — and
     sitting with it rather than resolving it — was the real learning.</p>
+          <div class="callout" style="margin-top:22px;">
+        <div class="k">On using the AI Self-Helper &mdash; the analyst&rsquo;s four questions</div>
+        <ul>
+        <li><b>How did you use the AI Self-Helper in your reflection process for this task?</b><br>I pasted the prompt into DeepSeek, described the &ldquo;Screens with Sense&rdquo; campaign, and explored questions 3, 2 and 5 across many sub-questions.</li>
+        <li><b>What impact do you think it had on the depth or quality of your reflection?</b><br>It turned the AI comparison into a mirror: writing an honest &ldquo;Me&rdquo; row exposed that I share the biases I had criticised in the models. The depth went well beyond a normal write-up.</li>
+        <li><b>Has your way of understanding what reflection means changed after using this tool? If so, how?</b><br>Yes. Reflection became about naming avoidance — designing for comfort instead of disruption — rather than defending the choices I had made.</li>
+        <li><b>Do you think you would use a similar tool in other tasks or subjects? Why or why not?</b><br>Yes, for any design or persuasion task, because it surfaces the gap between designing for a persona and designing for a life.</li>
+        </ul>
+      </div>
     </details>
+    <h2 class="section">Key Terms (Translator&rsquo;s Glossary)</h2>
+    <table class="cmp">
+      <thead><tr><th>Term</th><th>Meaning in this task</th></tr></thead>
+      <tbody>
+        <tr><td><b>Evidence-led campaign</b></td><td>Communication whose claims are grounded in research.</td></tr>
+        <tr><td><b>Call to action (CTA)</b></td><td>The single concrete step the audience is asked to take.</td></tr>
+        <tr><td><b>Audience persona</b></td><td>The specific person a message is designed for.</td></tr>
+        <tr><td><b>PIC-RAT</b></td><td>Used here to judge the campaign&rsquo;s level of learner engagement and impact.</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">Definitions informed by: Watters (2015); Livingstone &amp; Blum-Ross (2020).</p>
+    <h2 class="section">Self-Evaluation</h2>
+    <table class="cmp">
+      <thead><tr><th>Assessment</th><th>Score</th><th>Justification</th></tr></thead>
+      <tbody>
+        <tr><td><b>My individual work</b></td><td><b>9/10</b></td><td>The campaign and the &ldquo;mirror&rdquo; reflection were my best work; the small gap is the missing source links on the evidence slide.</td></tr>
+        <tr><td><b>The task overall</b></td><td><b>9/10</b></td><td>Coherent, honest, and well-grounded — my strongest activity.</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">Scale: 1 = minimum, 10 = maximum; 5 means everything was done well.</p>
     <div class="btnrow"><a class="btn ghost" data-go="home">← Back to Home</a></div>
   </section>
 
@@ -1224,6 +1412,16 @@
     <p class="body" style="margin-top:12px; color:var(--muted); font-size:.9rem;">
     The two halves of the game in one view: <i>why</i> data literacy matters (left) and <i>how</i>
     DataBox builds it (right), with the player and Databot at the centre.</p>
+
+    <h2 class="section">Watch my short video</h2>
+    <div class="videowrap">
+      <iframe src="https://drive.google.com/file/d/18iqMpGUw5itTjJrfkYVXcUfyp637UX1O/preview"
+        allow="autoplay; fullscreen" allowfullscreen loading="lazy"
+        title="Watch my short video"></iframe>
+    </div>
+    <p class="body" style="margin-top:10px; color:var(--muted); font-size:.9rem;">
+    Can&rsquo;t see the player? <a href="https://drive.google.com/file/d/18iqMpGUw5itTjJrfkYVXcUfyp637UX1O/view"
+    target="_blank" rel="noopener">Open the video in Google Drive &#8599;</a></p>
 
     <h2 class="section">The Data Literacy Gap</h2>
     <p class="body serif">DataBox is built around the distance between what data actually is and what
@@ -1315,6 +1513,17 @@
       of technology for learners, and it is assessed with the same <b>TPACK / PIC-RAT</b> lenses
       introduced in <b>Task 1</b> — the through-line of every task here.</p>
     </details>
+    <h2 class="section">Roles in the Preparation</h2>
+    <p class="body serif">This is an individual portfolio, so I took on every role myself. Here is how each one shaped this task:</p>
+    <table class="cmp">
+      <thead><tr><th>Role</th><th>What it involved for this task</th></tr></thead>
+      <tbody>
+        <tr><td><b>Facilitator</b></td><td>Framed the self-set review explicitly against TPACK and PIC-RAT.</td></tr>
+        <tr><td><b>Analyst</b></td><td>Ran the Copilot self-reflection and separated verifiable facts from marketing.</td></tr>
+        <tr><td><b>Translator</b></td><td>Defined data literacy, DigComp, gamification, and the data life cycle.</td></tr>
+        <tr><td><b>Curator</b></td><td>Sourced the game&rsquo;s materials and credited NotebookLM for the infographic.</td></tr>
+      </tbody>
+    </table>
     <h2 class="section">AI Self-Reflection</h2>
     <p class="body serif">For the DataBox review I used <b>Copilot</b> as a reflection facilitator to check whether I evaluated the game critically or just relayed its marketing. I pasted the facilitator prompt from the brief, described the self-set review task, and explored the questions it raised.</p>
     <div class="reqs">
@@ -1326,6 +1535,8 @@
         <span>Questions 2, 4 and 5 are unpacked through their sub-questions; 1 and 3 are answered along the way.</span></div></div>
       <div class="req"><span class="chk">✓</span><div><b>Wrote the team self-reflection</b>
         <span>A structured reflection drawn from the conversation closes this block.</span></div></div>
+      <div class="req"><span class="chk">✓</span><div><b>Answered the analyst&rsquo;s four questions on the AI Self-Helper</b>
+        <span>Collected in a highlighted note at the end of this reflection.</span></div></div>
     </div>
     <details>
       <summary>Open the full reflection — Copilot transcript + team self-reflection</summary>
@@ -1420,14 +1631,154 @@
     <p class="body serif"><b>3. How this connects to TPACK and PIC-RAT.</b> Judging a tool's Passive/Interactive/Creative ceiling is PIC-RAT used as an evaluation lens, and weighing whether content, pedagogy and technology actually fit is TPACK applied to someone else's design rather than our own.</p>
     <p class="body serif"><b>4. Evidence the work is authentically ours.</b> We can name which claims we repeated from the marketing and which we verified, and our written evaluation already flags the assessment-depth reservation — judgement a sales pitch would never include.</p>
     <p class="body serif"><b>5. Key takeaway.</b> The skill DataBox teaches — separating what a source shows from what it claims — is the exact skill its own promotional material tempts you to drop. We'd pair the game with the Task 7 ethics guidelines and use this review as the worked example.</p>
+          <div class="callout" style="margin-top:22px;">
+        <div class="k">On using the AI Self-Helper &mdash; the analyst&rsquo;s four questions</div>
+        <ul>
+        <li><b>How did you use the AI Self-Helper in your reflection process for this task?</b><br>I pasted the prompt into Copilot, described the self-set review task, and explored questions 2, 4 and 5.</li>
+        <li><b>What impact do you think it had on the depth or quality of your reflection?</b><br>It made me admit I had rated the game from its marketing rather than from play, and separate verifiable facts from sales language — a more rigorous review than my first pass.</li>
+        <li><b>Has your way of understanding what reflection means changed after using this tool? If so, how?</b><br>Yes. Reflection became about checking whether a polished source had done my thinking for me — which is the very skill the game claims to teach.</li>
+        <li><b>Do you think you would use a similar tool in other tasks or subjects? Why or why not?</b><br>Yes, for evaluating any resource, to keep my own judgement clearly separate from the pitch.</li>
+        </ul>
+      </div>
     </details>
+    <h2 class="section">Key Terms (Translator&rsquo;s Glossary)</h2>
+    <table class="cmp">
+      <thead><tr><th>Term</th><th>Meaning in this task</th></tr></thead>
+      <tbody>
+        <tr><td><b>Data literacy</b></td><td>The ability to read, evaluate and act on data.</td></tr>
+        <tr><td><b>DigComp</b></td><td>The European Digital Competence framework for citizens.</td></tr>
+        <tr><td><b>Gamification</b></td><td>Using game elements to support learning.</td></tr>
+        <tr><td><b>Data life cycle</b></td><td>The stages data passes through, from creation to use.</td></tr>
+        <tr><td><b>Virtual reality (VR)</b></td><td>An immersive, interactive simulated environment.</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">Definitions informed by: Vuorikari, Kluzer &amp; Punie (2022), <i>DigComp 2.2</i>.</p>
+    <h2 class="section">Self-Evaluation</h2>
+    <table class="cmp">
+      <thead><tr><th>Assessment</th><th>Score</th><th>Justification</th></tr></thead>
+      <tbody>
+        <tr><td><b>My individual work</b></td><td><b>8/10</b></td><td>A rigorous, honest review that separates facts from spin, but rated partly from marketing because I could not play the full game.</td></tr>
+        <tr><td><b>The task overall</b></td><td><b>8/10</b></td><td>Critical and well-structured; limited by not experiencing the product directly.</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">Scale: 1 = minimum, 10 = maximum; 5 means everything was done well.</p>
     <div class="btnrow"><a class="btn ghost" data-go="task10">← Task 10</a> <a class="btn" data-go="home">Back to Home →</a></div>
   </section>
 
 
+  <section id="competencies" class="page">
+    <div class="banner"><div class="eyebrow" style="color:#bfe2cf">Portfolio</div>
+      <h1>Competencies Map</h1><p>How the five activities build the course&rsquo;s competencies</p></div>
+    <h2 class="section">Overview</h2>
+    <p class="body serif">This chart relates the five activities in this portfolio to the competencies
+    the course set out to develop, framed against the European Framework for the Digital Competence of
+    Educators (DigCompEdu). A dot marks where an activity meaningfully develops a competency.</p>
+    <table class="cmp">
+      <thead><tr><th>Competency</th><th style="text-align:center; width:8%">T1</th><th style="text-align:center; width:8%">T7</th><th style="text-align:center; width:8%">T9</th><th style="text-align:center; width:8%">T10</th><th style="text-align:center; width:8%">DB</th></tr></thead>
+      <tbody>
+        <tr><td>Selecting &amp; evaluating digital resources critically</td><td style="text-align:center; color:var(--orange); font-weight:800;"></td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;"></td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td></tr>
+        <tr><td>Applying pedagogical frameworks (TPACK / PIC-RAT)</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;"></td><td style="text-align:center; color:var(--orange); font-weight:800;"></td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td></tr>
+        <tr><td>Using AI &amp; digital tools ethically and transparently</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td></tr>
+        <tr><td>Translating evidence into communication for real audiences</td><td style="text-align:center; color:var(--orange); font-weight:800;"></td><td style="text-align:center; color:var(--orange); font-weight:800;"></td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;"></td></tr>
+        <tr><td>Digital citizenship: data literacy, privacy &amp; misinformation</td><td style="text-align:center; color:var(--orange); font-weight:800;"></td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;"></td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td></tr>
+        <tr><td>Reflecting critically on one&rsquo;s own learning &amp; practice</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td><td style="text-align:center; color:var(--orange); font-weight:800;">●</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">
+    Key — T1: TPACK &amp; PIC-RAT · T7: Ethics of AI · T9: Family &amp; Screens I · T10: &ldquo;Screens with Sense&rdquo; · DB: DataBox.
+    Competency framing adapted from the course syllabus and Redecker (2017), <i>DigCompEdu</i>.</p>
+    <h2 class="section">What the map shows</h2>
+    <p class="body serif">Two competencies run through <i>every</i> activity: the ethical, transparent use
+    of AI (each task includes an AI Self-Reflection) and critical reflection on my own practice. The more
+    specialised competencies — evaluating resources, translating evidence, digital citizenship — cluster
+    where the task demanded them, which is why no single activity covers everything and why five were
+    chosen to represent the range.</p>
+    <div class="btnrow"><a class="btn ghost" data-go="home">← Back to Home</a> <a class="btn" data-go="curation">Curation →</a></div>
+  </section>
+
+  <section id="curation" class="page">
+    <div class="banner"><div class="eyebrow" style="color:#bfe2cf">Portfolio</div>
+      <h1>Curation</h1><p>The course map — the big ideas, not just these five tasks</p></div>
+    <h2 class="section">Overview</h2>
+    <p class="body serif">Curation is the whole tree of ideas the course developed, not only the activities
+    in this portfolio. The map below organises the course&rsquo;s concepts into five strands and shows how
+    the activities (T0&ndash;T10) hang off them.</p>
+    <div class="box">
+      <ul style="margin:0; padding-left:20px; line-height:1.7;">
+        <li><b>Foundations — technology in everyday teaching</b>
+          <ul><li>Day-to-day with technology (T0, &ldquo;knolling&rdquo;)</li>
+              <li>Frameworks: TPACK · PIC-RAT · SAMR (T1)</li></ul></li>
+        <li><b>Critical &amp; ethical use of technology</b>
+          <ul><li>Ethics of generative AI for learners (T7)</li>
+              <li>Speculative fiction: futures of a technology (T7)</li>
+              <li>Bias, deepfakes, misinformation &amp; academic integrity</li></ul></li>
+        <li><b>Digital competence &amp; citizenship</b>
+          <ul><li>DigComp / DigCompEdu competence frameworks</li>
+              <li>Data literacy, privacy &amp; the data life cycle (DataBox)</li></ul></li>
+        <li><b>Evidence, families &amp; wellbeing</b>
+          <ul><li>Personas &amp; the screens evidence base (T9)</li>
+              <li>Reading research: meta-analyses, screen time vs use</li></ul></li>
+        <li><b>Designing &amp; communicating with technology</b>
+          <ul><li>Evidence-led campaign design (T10)</li>
+              <li>Reflective practice: the AI Self-Helper across every task</li></ul></li>
+      </ul>
+    </div>
+    <p class="body" style="margin-top:10px; color:var(--muted); font-size:.86rem;">
+    The five strands are the through-lines of the subject; this portfolio samples five activities across them
+    to evidence the full range rather than repeat one strand.</p>
+    <div class="btnrow"><a class="btn ghost" data-go="competencies">← Competencies</a> <a class="btn" data-go="extras">Course Reflection →</a></div>
+  </section>
+
+  <section id="extras" class="page">
+    <div class="banner"><div class="eyebrow" style="color:#ffd9c4">Portfolio</div>
+      <h1>Course Reflection</h1><p>A critical, justified look back at the whole learning process</p></div>
+    <h2 class="section">Overview</h2>
+    <p class="body serif">This closing page steps back from the individual activities to reflect on the
+    course as a whole — what changed in how I think about technology and education, what I will keep, and
+    what I still find difficult. The answers are mine, supported by examples from the work in this portfolio.</p>
+    <h2 class="section">Looking Back</h2>
+    <h3 style="margin:20px 0 6px;">What have been the most meaningful learnings for my future practice as a teacher? Why?</h3>
+    <p class="body serif">That choosing technology is a <i>judgement</i>, not a checklist. TPACK and PIC-RAT gave me a way to ask &ldquo;what will the learner actually do, and will the tool replace, amplify or transform that?&rdquo; — a question I will carry into every lesson, because it stops me adopting tools just because they are new.</p>
+    <h3 style="margin:20px 0 6px;">Which aspects of the course challenged my initial ideas about technology and education? How?</h3>
+    <p class="body serif">I came in assuming &ldquo;more technology = better, more modern teaching.&rdquo; The screens evidence (T9) and the DataBox review showed me that the same tool can be Passive/Replacement or Creative/Transformative depending entirely on how it is used — so the technology is never the point on its own.</p>
+    <h3 style="margin:20px 0 6px;">One key decision I made during the course, and the reasoning — would I make it again?</h3>
+    <p class="body serif">In the &ldquo;Screens with Sense&rdquo; campaign I chose to affirm the parent&rsquo;s caution rather than argue with statistics. The reasoning was that trust precedes persuasion. I would make it again — but, as my reflection admitted, I would balance the reassurance with one genuine challenge so the message moves the audience, not just comforts them.</p>
+    <h3 style="margin:20px 0 6px;">One tension or difficulty I experienced, and how I addressed it.</h3>
+    <p class="body serif">The recurring tension was honesty versus simplicity: simplifying evidence for an audience kept sliding into suppressing it for comfort. I addressed it by naming the tension explicitly in my reflections rather than pretending I had resolved it — which is itself the more honest outcome.</p>
+    <h3 style="margin:20px 0 6px;">What have I learned about using AI in my work — advantages and limitations?</h3>
+    <p class="body serif"><b>Advantages:</b> AI is an excellent reflection partner and a fast way to compare perspectives. <b>Limitations:</b> it sounds confident while being wrong, several models share training data so their &ldquo;agreement&rdquo; is not independent confirmation, and it will happily do my thinking for me if I let it. The discipline is to use it to ask better questions, not to supply answers.</p>
+    <h3 style="margin:20px 0 6px;">How has my understanding of &ldquo;learning with technology&rdquo; changed?</h3>
+    <p class="body serif">It has shifted from the device to the design. &ldquo;Learning with technology&rdquo; now means the relationship between content, pedagogy and tool (TPACK) and the kind of activity it makes possible (PIC-RAT) — not the presence of a screen in the room.</p>
+    <h3 style="margin:20px 0 6px;">What elements of this course will I deliberately keep in my future practice? Why?</h3>
+    <p class="body serif">The PIC-RAT question as a lesson-planning check, the habit of comparing more than one source before trusting it, and the AI Self-Helper style of reflection — because all three turn &ldquo;I used a tool&rdquo; into &ldquo;I can justify why and how.&rdquo;</p>
+    <h3 style="margin:20px 0 6px;">If I had to explain this course to next year&rsquo;s students in one sentence:</h3>
+    <p class="body serif">&ldquo;It is less about which apps to use and more about learning to ask, honestly, whether the technology actually helps anyone learn.&rdquo;</p>
+    <h3 style="margin:20px 0 6px;">A &ldquo;title&rdquo; for this portfolio (like a film or series), justified:</h3>
+    <p class="body serif"><i>Monitor, Guide, Don&rsquo;t Ban</i> — borrowed from the campaign&rsquo;s core message, because the whole portfolio is about engaging critically with technology rather than either embracing or rejecting it wholesale.</p>
+    <h3 style="margin:20px 0 6px;">If this portfolio were a meme, what would it be and why?</h3>
+    <p class="body serif">The &ldquo;distracted boyfriend&rdquo; meme — the boyfriend is me, the new shiny app is the distraction, and the loyal partner is sound pedagogy. The joke (and the lesson) is to keep my eyes on the learning, not the tool.</p>
+    <h2 class="section">References &amp; Credits</h2>
+    <ul class="body" style="line-height:1.6; font-size:.9rem;">
+      <li>Kimmons, R., Graham, C. &amp; West, R. (2020). The PICRAT model for technology integration in teacher preparation. <i>Contemporary Issues in Technology and Teacher Education</i>.</li>
+      <li>Livingstone, S. &amp; Blum-Ross, A. (2020). <i>Parenting for a Digital Future</i>. Oxford University Press.</li>
+      <li>Mishra, P. &amp; Koehler, M. J. (2006). Technological Pedagogical Content Knowledge. <i>Teachers College Record</i>.</li>
+      <li>Redecker, C. (2017). <i>European Framework for the Digital Competence of Educators (DigCompEdu)</i>. Publications Office of the EU.</li>
+      <li>UNESCO (2023). <i>Guidance for generative AI in education and research</i>.</li>
+      <li>Vuorikari, R., Kluzer, S. &amp; Punie, Y. (2022). <i>DigComp 2.2</i>. Publications Office of the EU.</li>
+      <li>Watters, A. (2015). The learning apps trap.</li>
+      <li>Payne, R. (2019). Speculative-fiction prompts (p.&nbsp;80).</li>
+      <li>Image credit: section infographics generated with Google NotebookLM.</li>
+      <li>AI tools used as reflection facilitators: ChatGPT, Microsoft Copilot, DeepSeek.</li>
+    </ul>
+    <p class="body" style="margin-top:8px; color:var(--muted); font-size:.86rem;">
+    This portfolio is published under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons BY-NC-SA 4.0</a> licence.
+    Where ideas are reused from the sources above, they are cited in place.</p>
+    <div class="btnrow"><a class="btn ghost" data-go="curation">← Curation</a> <a class="btn" data-go="home">Back to Home →</a></div>
+  </section>
+
 </main>
 
-<footer>Made by Alex</footer>
+<footer>Made by Alex · Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></footer>
 
 <script>
   const pages = document.querySelectorAll('.page');
