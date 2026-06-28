@@ -131,6 +131,38 @@
   footer { text-align:center; color:var(--muted); font-size:.8rem; padding:30px 20px 50px; }
   footer a { color:var(--muted); }
 
+  /* ---- AI Self-Reflection: requirements strip + chat window ---- */
+  .reqs { display:grid; gap:10px; margin:18px 0; }
+  .req { display:flex; gap:13px; background:var(--card); border:1px solid var(--line);
+    border-radius:12px; padding:13px 16px; }
+  .req .chk { color:var(--green); font-weight:800; font-size:1.05rem; line-height:1.4; }
+  .req b { font-size:.92rem; }
+  .req span { display:block; color:var(--muted); font-size:.88rem; margin-top:2px; }
+
+  .chatwin { border:1px solid var(--line); border-radius:14px; overflow:hidden; margin:20px 0;
+    box-shadow:0 10px 26px rgba(0,0,0,.07); }
+  .chatwin .bar { background:#1b1b1b; padding:11px 15px; display:flex; align-items:center; gap:7px; }
+  .chatwin .bar i { width:11px; height:11px; border-radius:50%; display:inline-block; }
+  .chatwin .bar .r { background:#ff5f57; } .chatwin .bar .y { background:#febc2e; }
+  .chatwin .bar .g { background:#28c840; }
+  .chatwin .bar .title { color:#cfcabf; font-size:.78rem; font-weight:600; margin-left:9px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+  .chatwin .body { background:var(--card); }
+  .sysmsg { background:#f3efe7; border:1px dashed #d8d2c6; border-radius:10px; margin:14px; padding:0 16px; }
+  .sysmsg summary { color:var(--muted); font-weight:600; font-size:.82rem; padding:11px 0; }
+  .sysmsg .p { color:var(--muted); font-size:.82rem; line-height:1.5; margin:0 0 9px; }
+  .msg { padding:16px 18px; border-top:1px solid var(--line); }
+  .msg .role { display:inline-flex; align-items:center; gap:8px; font-size:.7rem; font-weight:700;
+    text-transform:uppercase; letter-spacing:.07em; margin-bottom:9px; }
+  .msg .role .av { width:21px; height:21px; border-radius:6px; color:#fff; font-size:.6rem;
+    display:inline-flex; align-items:center; justify-content:center; font-weight:800; }
+  .msg.user { background:#fbf7f1; } .msg.user .role { color:var(--green); }
+  .msg.user .role .av { background:var(--green); }
+  .msg.bot .role { color:var(--orange); } .msg.bot .role .av { background:var(--orange); }
+  .msg p { margin:0 0 11px; font-size:.93rem; } .msg p:last-child { margin-bottom:0; }
+  .msg .q { margin:0 0 9px; font-size:.93rem; }
+  .msg p i, .msg .q i { color:var(--muted); }
+
   @media (max-width:640px) {
     .cards, .twocol { grid-template-columns:1fr; }
     .persona { grid-template-columns:1fr; }
@@ -163,6 +195,7 @@
       <a data-go="task7">Task 7</a>
       <a data-go="task9">Task 9</a>
       <a data-go="task10">Task 10</a>
+      <a data-go="reflect">Reflection</a>
     </nav>
   </div>
 </header>
@@ -195,7 +228,9 @@
     frameworks themselves; Task 7 examines the ethics of generative AI for young students;
     Task 9 builds an evidence base around families and screens; and Task 10 turns that evidence
     into "Screens with Sense," a real campaign aimed at a parent. Together they show how I think
-    about choosing, questioning, and applying educational technology.</p>
+    about choosing, questioning, and applying educational technology. A closing <b>AI
+    Self-Reflection</b> activity then turns the lens inward, using a chatbot to interrogate the
+    choices behind the campaign.</p>
 
     <h2 class="section">Explore the Tasks</h2>
     <div class="cards">
@@ -214,6 +249,10 @@
       <a class="tcard" data-go="task10">
         <div class="k">Task 10</div><div class="t">"Screens with Sense" Campaign</div>
         <div class="d">An evidence-led Instagram campaign built for that persona.</div>
+      </a>
+      <a class="tcard" data-go="reflect">
+        <div class="k">Reflection</div><div class="t">AI Self-Reflection Helper</div>
+        <div class="d">A guided DeepSeek conversation interrogating the campaign, plus the team self-reflection.</div>
       </a>
     </div>
   </section>
@@ -548,6 +587,290 @@
       Transformation</b> of how families use screens, not mere Replacement of one warning with
       another.</p>
     </details>
+
+    <div class="btnrow"><a class="btn ghost" data-go="home">← Back to Home</a></div>
+  </section>
+
+  <!-- ============ AI SELF-REFLECTION ============ -->
+  <section id="reflect" class="page">
+    <div class="banner"><div class="eyebrow" style="color:#ffd9c4">AI Self-Reflection Helper</div>
+      <h1>Reflecting on the Campaign</h1><p>A guided DeepSeek conversation that interrogates the choices behind Task 10</p></div>
+
+    <h2 class="section">Overview</h2>
+    <p class="body serif">For this activity I used <b>DeepSeek</b> as a reflection facilitator — not
+    to do any work, but to ask better questions about the <b>"Screens with Sense"</b> campaign
+    (Task 10). I pasted the exact facilitator prompt provided in the brief, described the task, and
+    then worked through the questions it generated, exploring several in depth. The full conversation
+    is below, followed by the team self-reflection it produced.</p>
+
+    <h2 class="section">What the Brief Asked — and Where It's Met</h2>
+    <div class="reqs">
+      <div class="req"><span class="chk">✓</span><div><b>Used the exact facilitator prompt provided</b>
+        <span>The conversation opens with the professor's prompt, pasted verbatim as the first message.</span></div></div>
+      <div class="req"><span class="chk">✓</span><div><b>Stated the task and the AI tool used</b>
+        <span>Task: "Screens with Sense" Instagram campaign (Task 10). AI tool: DeepSeek.</span></div></div>
+      <div class="req"><span class="chk">✓</span><div><b>Explored at least three questions in depth</b>
+        <span>Questions 3, 2 and 5 are each unpacked through their sub-questions; questions 1 and 4 are woven in along the way.</span></div></div>
+      <div class="req"><span class="chk">✓</span><div><b>Wrote the team self-reflection</b>
+        <span>A structured reflection drawn from the conversation closes this page.</span></div></div>
+    </div>
+
+    <h2 class="section">The Conversation</h2>
+    <div class="chatwin">
+      <div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i>
+        <span class="title">DeepSeek — Reflection Facilitator</span></div>
+      <div class="body">
+
+        <details class="sysmsg">
+          <summary>Opening prompt — the exact facilitator prompt from the brief (click to expand)</summary>
+          <p class="p">Your role is to help students reflect on their work in a deep and meaningful way. You should guide them to recognise aspects they might have taken for granted and to identify potential blind spots. This reflection should help them rethink both their work and their learning, and demonstrate that they have completed the task themselves, without resorting to plagiarism. Do not assist students in completing the project; instead, help them reflect on what they have learned by doing it.</p>
+          <p class="p">When students provide the task instructions, your role is to create a total of 5 personalised questions to help them evaluate the following: whether they have completed the task correctly, whether they have learned what was expected, whether they have developed additional skills or knowledge from the task, whether they can effectively demonstrate that the work is their own and has not been copied, and how the learning from this task connects with what they already knew or with other areas of knowledge.</p>
+          <p class="p">You should present the questions consecutively numbered. Do not provide direct answers immediately. Instead, formulate questions based on the provided task instructions, inviting the student to reflect and deepen their learning. Number each question uniquely. After formulating the questions, ask the student if any seem particularly complex or worthy of further exploration, encouraging them to respond by choosing a question number.</p>
+          <p class="p">When the student selects a question to explore further, suggest additional relevant questions, numbered as sub-numbers (e.g. 3a, 3b, 3c). Do not offer to do the work for them. Incorporate advice on how to demonstrate the work is their own — explaining their reasoning, giving personal examples, citing resources, describing obstacles, and showing drafts. Introduce yourself at the start and ask for the task instructions. Highlight each chosen item in bold, and point out coherent connections between questions or reflections when you notice them.</p>
+        </details>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p>Hello! I'm your reflection facilitator. My role is to help you think deeply about the work you've completed — not to give you answers, but to ask you better questions. I'll help you identify blind spots, assumptions you may not have noticed, and what you genuinely learned by doing the task.</p>
+          <p>To begin, please share the full task instructions — the brief you were given, what you were asked to produce, and any specific requirements or frameworks involved.</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>Sure, here's the task I completed. It's called "Screens with Sense."</p>
+          <p>I had to design an evidence-led Instagram campaign aimed at a persona named Amber — a 29-year-old single mother in Cartagena who works in IT. She's cautious about educational technology, sees it as a "slippery slope," and limits her own screen use. The campaign needed to translate the research evidence I gathered in a previous task (Task 9) into warm, visual messages that affirm her instinct to guide rather than ban. The core message: monitor, guide, don't ban.</p>
+          <p>The campaign has four slides: a hook that opens with the panic she already feels, an evidence slide showing the consistency of the research, a nuance slide explaining that how screens are used matters more than how long, and an action slide giving one concrete habit — screens off one hour before bed, charged outside the bedroom.</p>
+          <p>I also had to write a written rationale explaining the choices, and run the same research question through three AI models (ChatGPT, Claude, Copilot), comparing how each read the evidence. The task connects to the TPACK and PIC-RAT frameworks we're using in the course.</p>
+          <p>The hardest part for me was resisting the urge to "win the argument" with statistics and instead build something Amber could actually use on a Tuesday night.</p>
+        </div>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p>Thank you for sharing that detailed description. I can already see several rich layers in what you produced. Let me ask you five personalised questions to help you reflect more deeply.</p>
+          <p class="q"><b>1.</b> You mentioned the hardest part was resisting the urge to "win the argument" with statistics. Looking back at the final campaign: is there any slide or message where you can still detect that original impulse creeping in — even subtly? How would you know?</p>
+          <p class="q"><b>2.</b> The task asked you to compare three AI models reading the same evidence. Beyond the surface-level observation that they gave different answers, what did that comparison teach you about your own relationship with research sources — specifically, how you select, trust, or dismiss evidence when you're the one doing the reading?</p>
+          <p class="q"><b>3.</b> You designed this for Amber — a specific persona with a specific worldview. If you had to defend one design choice you made because of who she is (and not because of what the evidence says), which choice would it be, and how did her identity — not just her demographics — shape it?</p>
+          <p class="q"><b>4.</b> Imagine a classmate submitted a campaign that looks polished and persuasive but you suspect they used an AI to generate most of the rationale and slide copy. What specific evidence could you point to in your own work that would convince someone you did the thinking yourself — the drafts, the dead ends, the revisions?</p>
+          <p class="q"><b>5.</b> The task connects to TPACK and PIC-RAT. If you had to explain to someone outside this course — a colleague, a parent — what this task taught you that neither framework alone could have taught you, what would you say?</p>
+          <p>Those are your five starting reflection points. Which one catches your attention first? You can also ask me to clarify or reframe any of them. Remember, you can return to any number at any time simply by typing it.</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>Let me start with question 3 — the one about Amber. That hits something I spent a lot of time on but haven't really articulated.</p>
+        </div>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p><b>3. You designed this for Amber — a specific persona with a specific worldview. If you had to defend one design choice you made because of who she is, which choice would it be, and how did her identity shape it?</b></p>
+          <p>Excellent choice. Let me push this further with some follow-ups:</p>
+          <p class="q"><b>3a.</b> Amber works in IT. That matters. Most "screen time" campaigns speak to parents as if they're technologically naive — but she isn't. Did you consciously adjust your tone or vocabulary to respect that technical literacy? Where in the campaign would she feel that respect — and where might she feel talked down to?</p>
+          <p class="q"><b>3b.</b> You placed her in Cartagena, not a generic "anywhere." Did that location influence anything in your campaign — the language, the visual references, the timing assumptions, the platforms? Or did the campaign default to a placeless, universal tone? What would change if you re-localised it?</p>
+          <p class="q"><b>3c.</b> Amber "trusts her own judgement and the parenting voices she follows online." That's a specific trust dynamic — she's not anti-expert, but she's selective. How did your campaign earn her trust without triggering her scepticism? What part of the campaign might actually lose her trust?</p>
+          <p class="q"><b>3d.</b> The campaign's call to action is "screens off one hour before bed, charged outside the bedroom." That's a specific, research-backed habit. But is it realistic for a single mother working in IT who may be doing her own work after the kids are asleep? What tension did you feel between what the evidence recommends and what her life actually allows?</p>
+          <p>Take your time. Pick whichever of these 3a–3d pulls at you most — or respond to several.</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>3a and 3d are the ones that make me uncomfortable, so those are probably the right ones to sit with.</p>
+          <p>For 3a — I think I didn't do enough here, honestly. I didn't use technical language, which I thought was the respectful choice — not dumbing things down. But on reflection, I might have done the opposite: by stripping out anything that acknowledged her IT background, I may have made the campaign feel generic, like it could be for anyone. The evidence slide is the one I'm worried about — it says "Every study. Every review. Same answer." That's a claim an IT professional would want to verify. A hyperlink to sources, or even a "swipe up to see the data" on the Instagram story version, would have signalled that I know she knows how to evaluate claims. I didn't include that. I assumed visual simplicity mattered more than intellectual credibility. I'm not sure that was right.</p>
+          <p>For 3d — this is the tension I felt but couldn't name while working. The "screens off one hour before bed" habit assumes a bedtime that the parent controls. But a single mother in IT might be putting her child to bed and then opening her own laptop. The phone charging outside the bedroom also assumes separate bedrooms — in my family growing up, we shared rooms for years. I didn't research whether that's common in Cartagena households. So there's a class and space assumption baked into the habit I recommended. I'm not sure how I'd fix it without losing the simplicity of the message, but I should at least acknowledge that the habit isn't universally applicable.</p>
+        </div>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p>That's a powerful reflection — particularly your honesty about what you didn't do. Let me note something you may not have spotted: in 3a, you worried about the evidence slide lacking sources, and in 3d, you identified an unexamined class and space assumption. Those are connected, aren't they? Both reveal that your campaign trusted the evidence itself to do persuasive work, but didn't fully account for the conditions under which someone like Amber would receive that evidence. That's not a failure — it's a gap between designing for a persona and designing for a life. Would you agree that's a pattern worth naming?</p>
+          <p>Let me also ask one more follow-up, since you've gone deep:</p>
+          <p class="q"><b>3e.</b> You said the campaign should affirm Amber's instinct to "guide rather than ban." But Amber also reads edtech as a "slippery slope." Did your campaign risk confirming her fear by being too aligned with it — by telling her what she already believes — rather than gently unsettling her assumptions? Where in the four-slide arc does she encounter something she didn't already think?</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>Yes — that pattern is real. I designed for a persona, not for a life. I think I treated Amber as a set of attributes to address rather than a person with contradictions and constraints. The evidence slide was my safety blanket — I assumed good data would earn trust, but trust is relational, not informational.</p>
+          <p>On 3e — I think the nuance slide ("passive scrolling vs. active &amp; creative") is the only one that challenges her. She already fears screens, she already knows the research exists, she probably already enforces some kind of bedtime rule. But the idea that what her child does on screens matters more than how long — that might be new. That challenges the slippery-slope framing because it implies there are good slopes and bad slopes, not just one direction. But I didn't frame it as a challenge — I framed it as relief. That was deliberate: I didn't want to argue with her. But maybe I should have asked myself whether relief and challenge can coexist in the same campaign.</p>
+        </div>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p>"Relief and challenge can coexist" — that's a sophisticated design question, and one many professional communicators never ask. Hold onto that.</p>
+          <p>Would you like to continue with question 3, or move to another number? You've covered 3a, 3d and 3e in depth. I'd also point out that your reflection on <i>trust being relational, not informational</i> connects strongly to question 2 (about what the AI comparison taught you about your own relationship with sources). Shall I note that connection for later, or would you like to pivot there now?</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>Let's go to question 2 now. You already flagged the connection, so I'm curious.</p>
+        </div>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p><b>2. The task asked you to compare three AI models reading the same evidence. What did that comparison teach you about your own relationship with research sources — how you select, trust, or dismiss evidence when you're the one doing the reading?</b></p>
+          <p>Let me offer some follow-ups that build on what you've already shared:</p>
+          <p class="q"><b>2a.</b> In your campaign, you cited "182 studies and 1.1 million young people." That's a number with rhetorical weight. But you also discovered — through the AI comparison — that Claude drew on older and newer studies while ChatGPT and Copilot leaned on recent meta-analyses. When you were gathering evidence yourself for Task 9, did you prioritise recency, volume, or something else? And did seeing the AI models make different choices make you question your own?</p>
+          <p class="q"><b>2b.</b> You identified Claude's blind spot as "focuses on negatives; under-weights the benefits." That's an easy critique of an AI. But if you look at your own campaign honestly: did you, too, under-weight something — the benefits of unrestricted screen time, the joys of gaming, the social connections screens enable — in order to keep the message clean? What evidence did you leave out, and why?</p>
+          <p class="q"><b>2c.</b> The AI comparison table in your task is structured and concise — model, core stance, blind spot. But that table is also a piece of your interpretation. How did you decide what counted as a "blind spot" versus just a legitimate difference in emphasis? What stopped you from labelling Claude as "wrong" rather than "focused on negatives"?</p>
+          <p class="q"><b>2d.</b> You mentioned earlier that trust is relational, not informational. The AI models produced information — sometimes conflicting. If you had to decide which model to trust (not which one was most accurate, but which one you'd return to for future work), which would it be and why? And what does that answer reveal about how you evaluate any source — human or machine?</p>
+          <p>Several of these connect to your earlier reflections on 3a and 3e. Take whichever path feels most alive.</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>2b is the one I need to sit with. You're right — I did leave things out.</p>
+          <p>I knew from the research that screens can be genuinely beneficial: language learning apps, creative tools, social connection for isolated kids. The evidence I read in Task 9 included studies showing that educational screen use can improve outcomes. But in the campaign, that evidence appears only dimly — in the nuance slide, as "active &amp; creative" use. It's a footnote, not a pillar.</p>
+          <p>Why did I leave it out? Honestly, because I was afraid it would muddy the message. Amber is already sceptical. If I lead with "screens can be great actually," she might dismiss the whole campaign as techno-optimism. So I soft-pedalled the benefits to keep her in the conversation. But that's a strategic choice that also has an ethical dimension — I'm shaping what evidence she sees based on what I think she can handle. That's exactly what I criticised Claude for doing. The blind spot I attributed to Claude — focusing on negatives, under-weighting benefits — is also my blind spot.</p>
+          <p>That's uncomfortable. The AI comparison was supposed to help me see their limitations, but it turns out it revealed mine too.</p>
+        </div>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p>That's exactly the kind of reflection this exercise is designed to produce. You've done something important here: you stopped treating the AI comparison as an external analysis and recognised it as a mirror. The structure of your task — model, stance, blind spot — becomes a framework you can turn on yourself. What would your own row in that table say?</p>
+          <p>Let me offer one more question on this thread, then we can move on or stay here:</p>
+          <p class="q"><b>2e.</b> If you rewrote the AI comparison table with an honest fourth row labelled "Me," what would you write under "Core stance," "Emphasis &amp; sources," and "Blind spot / bias"? Be as specific as you were with the models.</p>
+          <p>And before you answer — I want to point out a connection you may have noticed: your observation in 3e (that the nuance slide is the only one that challenges Amber) and your observation in 2b (that you soft-pedalled the benefits of screens) are the same pattern. You avoided challenge in both directions — you didn't challenge Amber's fear, and you didn't challenge the dominant "screens are harmful" narrative with evidence of benefits. Your campaign sits in the middle, affirming caution on both sides. Is that a coherent design philosophy, or an avoidance of conflict?</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>That last question — coherent philosophy or avoidance of conflict — is brutal and accurate. I think it started as a philosophy (meet people where they are) and became avoidance when I got uncomfortable. The campaign is designed to be non-threatening, but perhaps it's so non-threatening that it doesn't actually move anyone. Amber finishes the four slides feeling validated, but does she change anything?</p>
+          <p>To your 2e question — here's my honest row:</p>
+          <p><b>Me</b> — Core stance: how screens are used matters more than how long; evidence should be translated into habits, not arguments. Emphasis &amp; sources: leans on recent meta-analyses (same as ChatGPT); prioritises actionable findings over comprehensive ones. Blind spot / bias: avoids presenting evidence that might alienate the audience; conflates "not scaring the user" with "being honest with the user"; assumes simplicity serves clarity when it sometimes serves comfort.</p>
+          <p>That was harder to write than the three AI rows combined.</p>
+        </div>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p>And yet it's the most valuable row in the table. I hope you'll keep it.</p>
+          <p>You've now explored questions 3 and 2 in considerable depth. You have three questions remaining — 1, 4 and 5. Would you like to tackle one of those, or is there a connection between your reflections so far that you'd like to pull on further?</p>
+          <p>I'll note for the record that your reflections on 3 and 2 have already touched on question 1 (whether you completed the task correctly — you've identified several ways in which "correct" is more complex than "met the rubric") and question 4 (demonstrating the work is yours — your honest account of what you left out and why is powerful evidence of authorship). If you choose 1 or 4 next, much of the groundwork is already laid.</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>Let me go to question 5 — the TPACK and PIC-RAT connection. That's the one I feel least confident about, which probably means I should do it.</p>
+        </div>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p><b>5. The task connects to TPACK and PIC-RAT. If you had to explain to someone outside this course what this task taught you that neither framework alone could have taught you, what would you say?</b></p>
+          <p>Good instinct — discomfort is usually where the learning is. Let me open this up:</p>
+          <p class="q"><b>5a.</b> TPACK describes the intersection of technological, pedagogical, and content knowledge. PIC-RAT asks whether technology use is Passive/Interactive/Creative and whether it Replaces/Amplifies/Transforms. Your campaign isn't a classroom lesson, but it is an educational intervention. If you had to map your four slides onto PIC-RAT, where do they land? And what does that mapping reveal about what kind of "teaching" you were actually doing?</p>
+          <p class="q"><b>5b.</b> You described Amber as someone who "sees educational technology as a slippery slope." That's a TPACK tension — she questions the T in the equation. Your campaign didn't try to convince her that technology is good; it tried to show her how to use it pedagogically. Is that a TPACK-informed choice you made consciously, or did it emerge from the persona work? Could you have done it without TPACK?</p>
+          <p class="q"><b>5c.</b> The campaign lives on Instagram — a commercial platform, not an educational one. PIC-RAT would ask whether that choice amplifies or transforms the conversation about screen time. But Instagram also shapes the conversation through its format: square slides, limited text, visual-first. Did the platform constrain your pedagogical message, or did it sharpen it? What couldn't you say because of where you were saying it?</p>
+          <p class="q"><b>5d.</b> You mentioned earlier that you avoided challenging Amber. TPACK would ask: what does effective "pedagogy" look like when your learner is a sceptical adult, not a student in a classroom? PIC-RAT asks about the role of the technology. But neither framework fully addresses trust as a precondition for learning. Did this task reveal a gap in the frameworks — or did it reveal something the frameworks assume but don't name?</p>
+          <p>I suspect 5c and 5d will resonate with your earlier insights about trust and persona-versus-life. But follow whichever pulls hardest.</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>5c and 5d are the ones.</p>
+          <p>On 5c — Instagram definitely constrained the message. The four-slide arc is efficient, but it's also reductive. I couldn't include nuance about what "active and creative" actually looks like — examples of good apps, age-specific guidance, the difference between solo and co-viewed use. The platform demands that every slide stand alone, be shareable, work without sound. That's not just a format constraint; it's an epistemic constraint. The medium shapes what can be known. PIC-RAT might say Instagram amplifies reach but replaces depth. I think that's accurate.</p>
+          <p>The irony isn't lost on me: I'm using the very thing Amber fears — social media — to talk to her about screen time. That tension deserves more attention than I gave it. If Instagram is part of the problem, can it be part of the solution? I assumed yes without really interrogating it.</p>
+          <p>On 5d — yes, trust is the missing variable. TPACK assumes a learner who's ready to learn; PIC-RAT assumes technology is being deployed in a context where its use is accepted. Neither framework accounts for a learner who actively mistrusts the medium through which the message is delivered. Amber doesn't need a better pedagogical strategy; she needs a reason to believe the messenger isn't trying to manipulate her. The campaign tried to build that trust through warmth and evidence, but I'm not sure either framework helped me think about that systematically. They gave me vocabulary for describing what I did, but not for designing it.</p>
+        </div>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p>Those are nuanced observations — especially the distinction between frameworks that <i>describe</i> and frameworks that help you <i>design</i>. That's a meta-level insight about what educational theory can and cannot do, and it's one many students never reach.</p>
+          <p>Let me connect something for you: your reflection on 5c (Instagram as epistemic constraint) echoes your earlier point in 3a about whether visual simplicity came at the cost of intellectual credibility. And your point on 5d (trust as a missing variable) connects to your observation that trust is relational, not informational. These aren't separate reflections — you're circling the same core problem: how do you design educational communication when the medium, the message, and the messenger are all sources of suspicion? That's a question the frameworks name but don't solve.</p>
+          <p>You've now explored questions 2, 3 and 5 in depth. You have questions 1 and 4 remaining. Do you want to address one of those, or do you feel the conversation has covered what you need?</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>I think this conversation has been more productive than I expected. Looking back, I've actually addressed question 1 (whether I completed the task correctly) throughout — I've identified things I'd change, tensions I didn't resolve, and places where "correct" meant different things. And question 4 (demonstrating the work is my own) — the whole conversation is evidence of that. The confessions about what I left out, the discomfort with my own blind spots, the specific choices about slides and language and trust — none of that could be generated by someone who hadn't done the work.</p>
+          <p>One thing I want to surface: the most valuable learning from this task wasn't the campaign itself — it was discovering that I criticise AI models for biases I share, that I conflate simplicity with honesty, and that frameworks describe what I do better than they help me design what to do next. That's meta-learning, and it wouldn't have happened without this kind of structured reflection.</p>
+        </div>
+
+        <div class="msg bot">
+          <div class="role"><span class="av">DS</span>DeepSeek</div>
+          <p>I'm genuinely glad. What you've just articulated — that the most valuable learning was the meta-learning, not the deliverable — is itself the strongest answer to question 1. You didn't just complete the task; you understood what the task was designed to teach.</p>
+          <p>Before we close, I'll offer one final observation: across all five questions, a single pattern kept surfacing — you design for comfort, then discover that comfort can be a form of avoidance. Whether it was Amber's comfort, your own comfort with clean messages, or the comfort of letting frameworks do the thinking for you — you repeatedly identified moments where you chose reassurance over disruption. That's not a flaw. It's a design disposition. And now that you've named it, it becomes something you can choose deliberately rather than default to unconsciously.</p>
+          <p>Thank you for engaging so deeply. I hope you'll carry this pattern of questioning into future tasks — not just asking "did I do it right?" but "what did I avoid, and why?"</p>
+        </div>
+
+        <div class="msg user">
+          <div class="role"><span class="av">A</span>You</div>
+          <p>Thank you. That closing observation is going into my team's self-reflection.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="div">
+
+    <h2 class="section">Team Self-Reflection</h2>
+    <p class="body"><b>Task:</b> "Screens with Sense" — Evidence-led Instagram Campaign (Task 10)<br>
+    <b>AI tool used:</b> DeepSeek, as a reflection facilitator</p>
+    <p class="body serif">This reflection was written after the structured conversation above. The
+    conversation pushed us to look beyond whether we "did the task right" and examine what we
+    avoided, what we assumed, and what we genuinely learned.</p>
+
+    <h3>1. What the task taught us that we didn't expect</h3>
+    <p class="body serif">The task appeared to be about translating research into a campaign. In
+    practice, the deeper learning came from three discoveries the conversation surfaced:</p>
+    <ul class="body serif">
+      <li><b>We criticise AI models for biases we ourselves share.</b> The AI comparison table was
+      meant to reveal how ChatGPT, Claude and Copilot each had blind spots — but writing an honest
+      fourth row for ourselves showed the same pattern: selectively presenting evidence to keep the
+      audience comfortable rather than informed. This mirror effect was the most uncomfortable and
+      most valuable insight.</li>
+      <li><b>Designing for a persona is not the same as designing for a life.</b> The campaign
+      treated Amber as a set of attributes (IT worker, single mother, sceptical) but failed to
+      account for material constraints — shared bedrooms in Cartagena, a parent who works after the
+      child sleeps. The habit we recommended assumed conditions we didn't verify.</li>
+      <li><b>Frameworks describe better than they help design.</b> TPACK and PIC-RAT gave us
+      vocabulary to label what we did, but neither addressed trust as a precondition for learning —
+      something our persona work revealed as central.</li>
+    </ul>
+
+    <h3>2. What we would change</h3>
+    <ul class="body serif">
+      <li>Include verifiable source links on the evidence slide, respecting Amber's technical
+      literacy rather than prioritising visual simplicity over intellectual credibility.</li>
+      <li>Acknowledge the limitations of the bedtime-screen habit explicitly ("this may look
+      different in your household") rather than presenting it as universal.</li>
+      <li>Give equal weight to the benefits of active screen use, rather than relegating it to a
+      single nuance slide. The evidence supports it, and withholding it is ethically questionable —
+      even if strategically convenient.</li>
+      <li>Interrogate the platform choice (Instagram) more honestly, asking whether using a medium
+      Amber mistrusts to deliver a message about screen time is coherent or contradictory.</li>
+    </ul>
+
+    <h3>3. How this connects to TPACK and PIC-RAT</h3>
+    <ul class="body serif">
+      <li>TPACK helped us recognise that Amber's scepticism is a Content–Technology tension: she
+      accepts the pedagogical goal (guiding her child) but questions the technological means
+      (screens). The campaign bridged that gap not by arguing for technology but by showing
+      pedagogical use of it — a TPACK-informed move.</li>
+      <li>PIC-RAT helped us see that Instagram as a platform amplifies reach but replaces depth. The
+      format (square slides, no sound, standalone messages) shaped what evidence we could present as
+      much as any pedagogical decision we made.</li>
+      <li>However, neither framework accounted for trust or platform scepticism as variables. This
+      task revealed that educational design in real-world contexts requires attending to relational
+      dynamics that sit outside both models.</li>
+    </ul>
+
+    <h3>4. Evidence that the work is authentically ours</h3>
+    <ul class="body serif">
+      <li>The rationale was developed through iterative drafting — early versions tried to "win the
+      argument" with statistics before we deliberately pivoted to habit-centred messaging.</li>
+      <li>The AI comparison required us to formulate the query, evaluate three separate model
+      responses, identify differences in source bases, and synthesise our own interpretation. No AI
+      generated that analysis for us.</li>
+      <li>The design choices (hook–evidence–nuance–action arc; the specific habit selection; the
+      decision to affirm rather than challenge) were debated within the team and traceable to
+      specific evidence from Task 9 and specific persona attributes.</li>
+      <li>The blind spots we identified (class and space assumptions, soft-pedalling benefits,
+      platform irony) are not things we could have named without doing the work and then reflecting
+      on it critically.</li>
+    </ul>
+
+    <h3>5. Key takeaway</h3>
+    <p class="body serif">The most important thing this task taught us is that translating evidence
+    into practice is not just about accuracy — it's about honesty. Simplifying evidence for an
+    audience can easily become suppressing evidence for comfort. The line between "making it
+    accessible" and "making it palatable" is thinner than we thought. Naming that tension — and
+    sitting with it rather than resolving it — was the real learning.</p>
 
     <div class="btnrow"><a class="btn ghost" data-go="home">← Back to Home</a></div>
   </section>
